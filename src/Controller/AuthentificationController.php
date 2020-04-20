@@ -19,6 +19,7 @@ class AuthentificationController extends AbstractController
      * @throws \Lexik\Bundle\JWTAuthenticationBundle\Exception\JWTEncodeFailureException
      */
     public function login(Request $request,UserRepository $userRepository,UserPasswordEncoderInterface $userPassword, JWTEncoderInterface $JWTEncoder){
+        header("Access-Control-Allow-Origin: *");
         $reception= $request->request->all();
       //  $values = json_decode($request->getContent());
        // var_dump($values);
