@@ -13,7 +13,6 @@ class SystemeController extends AbstractController
      * @Route("/infos", name="systeme")
      */
     public function infos(){
-        header("Access-Control-Allow-Origin: *");
         $a=$this->getUser();
 
         return new JsonResponse($a->getPrenom());
